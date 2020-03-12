@@ -4,16 +4,12 @@
 
 ## Index
 
-<div style="font-weight:700">
-
 - [Environment](#environment)
 - [Algorithm](#algorithm)
 - [Getting Started](#getting-started)
 - [Training](#training)
 - [Watch trained Agent](#watch-trained-agent)
 - [Reference](#reference)
-
-</div>
 
 ## Environment
 
@@ -66,45 +62,43 @@ This target network is only updated periodically, in contrast to the action-valu
 
 - **Step 1**: First, get started with `env_test.ipynb` to verify that the environment is properly set up.
 - **Step 2**: Train DQN Agent using `train.ipynb`.
-- **Step 3**: Test DQN-Agent and visualize using `test.ipynb` at different checkpoints. You can also skip **Step 2** and download pre-trained models and place them inside **models** folder.
+- **Step 3**: Test DQN-Agent and visualize using `test.ipynb` at different checkpoints. You can also skip **Step 2** and download the pre-trained model from [**here**](https://drive.google.com/open?id=1qn_Nq-uZCHTdsQvs7XgjCgAP8v390Cbb) and place it inside the basic folder.
 
 ## Training
 
 ### Neural Network
 
-Because the agent learnings from vector data (not pixel data), the Q-Network (local and target network) employed here consisted of just 2 hidden, fully connected layers with 16 nodes. The size of the input layer was equal to the dimension of the state size (i.e., 1 node) and the size of the output layer was equal to the dimension of the action size (i.e., 2).  
+Because the agent learnings from vector data (not pixel data), the Q-Network (local and target network) employed here consisted of just 2 hidden, fully connected layers with 64 nodes. The size of the input layer was equal to the dimension of the state size (i.e., 20 nodes) and the size of the output layer was equal to the dimension of the action size (i.e., 3).  
 
 ### Hyperparameters
 
-<div style="font-weight:700">
-
-- STATE_SIZE: 1 (Dimension of each state)
-- ACTION_SIZE: 2 (Two possible actions (Move left, move right))
+- STATE_SIZE: 20 (Dimension of each state)
+- ACTION_SIZE: 3 (Two possible actions (Move left, move right))
 - BUFFER_SIZE: 1e5 (Replay buffer size)
 - BATCH_SIZE: 32 (Mini-batch size)
 - GAMMA: 0.99 (Discount factor)
 - LR: 1e-3 (Learning rate)
-- Tau: 1e3 (Soft-parameter update)
+- Tau: 1e-2 (Soft-parameter update)
 - UPDATE_EVERY: 5 (How often to update the network)
 
-</div>
-
 ### Training Parameters
-
-<div style="font-weight:700">
 
 - BENCHMARK_REWARD = 0.93
 - epsilon (float): 1.0
 - epsilon_min: 0.01
-- epsilon_decay: 0.99
+- epsilon_decay: 200
 - SCORES_AVERAGE_WINDOW = 100
 - NUM_EPISODES = 2000
 
-</div>
-
 ### Performance
 
+| Training | Testing |
+|:-:|:-:|
+| ![training](./media/train.svg) |  ![Testing](./media/test.svg) |
+
 ## Watch Trained Agent
+
+![Trained Agent](./media/trained_agent.gif)
 
 ## Reference
 
