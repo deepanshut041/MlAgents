@@ -55,12 +55,12 @@ This target network is only updated periodically, in contrast to the action-valu
 
 ### Files
 
-- `dqn_agent.py`: Implementation of a DQN-Agent
-- `replay_memory.py`: Implementation of a DQN-Agent's replay buffer (memory)
-- `model.py`: Implementation of neural network for vector-based DQN learning using PyTorch.
-- `env_test.ipynb`: Test if the environment is properly set up or not.
-- `train.ipynb`: Train DQN Agent on the environment.
-- `test.ipynb`: Test DQN-agent using a trained model and visualize it.
+- `dqn_agent.py`: Implementation of a DQN-Agent. [Link](https://github.com/deepanshut041/ml_agents-pytorch/blob/master/basic/dqn_agent.py)
+- `replay_memory.py`: Implementation of a DQN-Agent's replay buffer (memory). [Link](https://github.com/deepanshut041/ml_agents-pytorch/blob/master/basic/replay_memory.py)
+- `model.py`: Implementation of neural network for vector-based DQN learning using PyTorch. [Link](https://github.com/deepanshut041/ml_agents-pytorch/blob/master/basic/model.py)
+- `env_test.ipynb`: Test if the environment is properly set up or not. [Link](https://github.com/deepanshut041/ml_agents-pytorch/blob/master/basic/env_test.ipynb)
+- `train.ipynb`: Train DQN Agent on the environment. [Link](https://github.com/deepanshut041/ml_agents-pytorch/blob/master/basic/train.ipynb)
+- `test.ipynb`: Test DQN-agent using a trained model and visualize it. [Link](https://github.com/deepanshut041/ml_agents-pytorch/blob/master/basic/test.ipynb)
 
 ### How to Train
 
@@ -78,14 +78,14 @@ Because the agent learnings from vector data (not pixel data), the Q-Network (lo
 
 <div style="font-weight:700">
 
-- state_size: 1 (One variable corresponding to the current state.)
-- action_size: 2 (Two possible actions (Move left, move right))
-- replay_memory size: 1e5
-- batch_size: 32
-- gamma: 0.99
-- learning_rate: 1e-3
-- Tau: 1e3
-- update_every: 5
+- STATE_SIZE: 1 (Dimension of each state)
+- ACTION_SIZE: 2 (Two possible actions (Move left, move right))
+- BUFFER_SIZE: 1e5 (Replay buffer size)
+- BATCH_SIZE: 32 (Mini-batch size)
+- GAMMA: 0.99 (Discount factor)
+- LR: 1e-3 (Learning rate)
+- Tau: 1e3 (Soft-parameter update)
+- UPDATE_EVERY: 5 (How often to update the network)
 
 </div>
 
@@ -93,12 +93,12 @@ Because the agent learnings from vector data (not pixel data), the Q-Network (lo
 
 <div style="font-weight:700">
 
-- num_episodes: 2000
+- BENCHMARK_REWARD = 0.93
 - epsilon (float): 1.0
 - epsilon_min: 0.01
 - epsilon_decay: 0.99
-- scores_average_window: 100
-- solved_score: 0.93(mean over 100 episodes)
+- SCORES_AVERAGE_WINDOW = 100
+- NUM_EPISODES = 2000
 
 </div>
 
