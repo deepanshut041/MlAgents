@@ -3,8 +3,8 @@ import torch
 import torch.nn.functional as F
 import torch.optim as optim
 import random
-from .replay_memory import ReplayBuffer
-from .model import DQNLinear
+from replay_memory import ReplayBuffer
+from model import DQNLinear
 
 class DQNAgent():
     def __init__(self, input_shape, action_size, buffer_size, batch_size, gamma, lr, tau, update_every, device):
@@ -20,7 +20,6 @@ class DQNAgent():
             lr (float): learning rate 
             tau (float): Soft-parameter update
             update_every (int): how often to update the network
-            model(Model): Pytorch Model
             device(string): Use Gpu or CPU
         """
         self.input_shape = input_shape
@@ -40,7 +39,7 @@ class DQNAgent():
         self.optimizer = optim.Adam(self.policy_net.parameters(), lr=self.lr)
         
         # Replay memory
-        self.memory = ReplayBuffer(self.buffer_size, self.batch_size, self.seed, self.device)
+        self.memory = ReplayBuffer(self.buffer_size, self.batch_size, self.device)
         
         self.t_step = 0
 
@@ -99,3 +98,21 @@ class DQNAgent():
     def soft_update(self, policy_model, target_model, tau):
         for target_param, policy_param in zip(target_model.parameters(), policy_model.parameters()):
             target_param.data.copy_(tau*policy_param.data + (1.0-tau)*target_param.data)
+
+    def load_model(self, path):
+        
+        checkpoint = torch.load(path)
+        self.policy_net.load_state_dict(checkpoint['state_dict'])
+        self.target_net.load_state_dict(checkpoint['state_dict'])
+        self.optimizer.load_state_dict(checkpoint['optimizer'])
+        scores = checkpoint['scores']
+
+        return scores
+
+    def save_model(self, scores, path):
+        model = {
+            "state_dict": self.policy_net.state_dict(),
+            "optimizer": self.optimizer.state_dict(),
+            "scores": scores
+        }
+        torch.save(model, path)
