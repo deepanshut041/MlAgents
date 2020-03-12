@@ -109,7 +109,7 @@ class DQNAgent():
 
         return scores
 
-    def save_model(self, scores, path):
+    def save_model(self, path, scores):
         model = {
             "state_dict": self.policy_net.state_dict(),
             "optimizer": self.optimizer.state_dict(),

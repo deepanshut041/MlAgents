@@ -11,9 +11,9 @@ class DQNLinear(nn.Module):
             action_size (int): Dimension of each action
         """
         super(DQNLinear, self).__init__()
-        self.fc1 = nn.Linear(state_size, 32)
-        self.fc2 = nn.Linear(32, 32)
-        self.fc3 = nn.Linear(32, action_size)
+        self.fc1 = nn.Linear(state_size, 64)
+        self.fc2 = nn.Linear(64, 64)
+        self.fc3 = nn.Linear(64, action_size)
 
     def forward(self, state):
         x = F.relu(self.fc1(state))

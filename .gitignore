@@ -3,3 +3,5 @@
 **.pth
 
 **/__pycache__/
+
+unity_envs/
