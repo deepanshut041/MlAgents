@@ -16,12 +16,12 @@ This repository contains the implementation of deep reinforcement learning algor
 
 - [**Environments**](#Environments)
   - [**Basic**](#basic)
+  - [**Push Block**](#push-block)
+  - [**Reacher**](#reacher)
   - [**3D Balance Ball**](#3d-balance-ball)
   - [**GridWorld**](#gridworld)
   - [**Tennis**](#tennis)
-  - [**Push Block**](#push-block)
   - [**Wall Jump**](#wall-jump)
-  - [**Reacher**](#reacher)
   - [**Crawler**](#crawler)
   - [**Food Collector**](#food-collector)
   - [**Hallway**](#hallway)
@@ -50,6 +50,38 @@ A linear movement task where the agent must move left or right to rewarding stat
 **:video_camera: [Watch trained Agent](.)**
 
 **:warning: Environment Solved :heavy_check_mark:**
+
+### Push Block
+
+<p align="center"><img src="./media/push.png" height="350px"></p>
+
+A platforming The Environment where the agent can push a block around. Here the goal is agent must push the block to the goal.
+
+**:file_folder: [Implementation](./push-block)**
+
+**:orange_book: [Colab](.)**
+
+**:newspaper: [Article](.)**
+
+**:video_camera: [Watch trained Agent](.)**
+
+**:warning: Environment Solved :x:**
+
+### Reacher
+
+<p align="center"><img src="./media/reacher.png" height="350px"></p>
+
+The Double-jointed arm which can move to target locations. Here the goal is agents must move its hand to the goal location, and keep it there.
+
+**:file_folder: [Implementation](./reacher)**
+
+**:orange_book: [Colab](.)**
+
+**:newspaper: [Article](.)**
+
+**:video_camera: [Watch trained Agent](.)**
+
+**:warning: Environment Solved :x:**
 
 ### 3D Balance Ball
 
@@ -99,22 +131,6 @@ The two-player game where agents control rackets to hit a ball over the net. Her
 
 **:warning: Environment Solved :x:**
 
-### Push Block
-
-<p align="center"><img src="./media/push.png" height="350px"></p>
-
-A platforming The Environment where the agent can push a block around. Here the goal is agent must push the block to the goal.
-
-**:file_folder: [Implementation](./push-block)**
-
-**:orange_book: [Colab](.)**
-
-**:newspaper: [Article](.)**
-
-**:video_camera: [Watch trained Agent](.)**
-
-**:warning: Environment Solved :x:**
-
 ### Wall Jump
 
 <p align="center"><img src="./media/wall.png" height="350px"></p>
@@ -122,22 +138,6 @@ A platforming The Environment where the agent can push a block around. Here the 
 A platforming The Environment where the agent can jump over a wall. Here the goal is agent must use the block to scale the wall and reach the goal.
 
 **:file_folder: [Implementation](./wall-jump)**
-
-**:orange_book: [Colab](.)**
-
-**:newspaper: [Article](.)**
-
-**:video_camera: [Watch trained Agent](.)**
-
-**:warning: Environment Solved :x:**
-
-### Reacher
-
-<p align="center"><img src="./media/reacher.png" height="350px"></p>
-
-The Double-jointed arm which can move to target locations. Here the goal is agents must move its hand to the goal location, and keep it there.
-
-**:file_folder: [Implementation](./reacher)**
 
 **:orange_book: [Colab](.)**
 
@@ -283,10 +283,7 @@ pip install -r requirements.txt
 
 Finally, download Environments that correspond to your operating system. Copy/paste the extracted content to the folder with the name of `unity_envs`.
 
-- [Linux](.)
-- [Mac OSX](.)
-- [Windows (32-bit)](.)
-- [Windows (64-bit)](.)
+- [Windows (64-bit)](https://drive.google.com/open?id=1yMMMJC4ttS118eqYbr2PpDSpdnyhSoDx)
 
 ## Any questions
 
