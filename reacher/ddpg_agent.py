@@ -8,7 +8,7 @@ from model import Actor, Critic
 from ou_noise import OUNoise
 
 class DDPGAgent():
-    def __init__(self, input_shape, action_size, buffer_size, batch_size, gamma, lr_actor, lr_critic, tau, update_every, device):
+    def __init__(self, input_shape, action_size, buffer_size, batch_size, gamma, lr_actor, lr_critic, tau, update_every, num_agents, device):
         """Initialize an Agent object.
         
         Params
@@ -22,6 +22,7 @@ class DDPGAgent():
             lr_critic (float): Critic learning rate 
             tau (float): Soft-parameter update
             update_every (int): how often to update the network
+            num_agents: Number of agent
             device(string): Use Gpu or CPU
         """
         self.input_shape = input_shape
@@ -33,9 +34,8 @@ class DDPGAgent():
         self.lr_critic = lr_critic
         self.update_every = update_every
         self.tau = tau
+        self.num_agents = num_agents
         self.device = device
-        self.epsilon = 0.1
-        self.epsilon_decay = 1e-6
 
         
         # Actor Network
@@ -49,7 +49,10 @@ class DDPGAgent():
         self.critic_optimizer = optim.Adam(self.critic_local.parameters(), lr=self.lr_critic)
 
         # Noise process
-        self.noise = OUNoise(action_size)
+        self.noise = [
+            OUNoise(action_size)
+            for _ in range(num_agents)
+            ]
         
         # Replay memory
         self.memory = ReplayBuffer(self.buffer_size, self.batch_size, self.device)
@@ -78,6 +81,7 @@ class DDPGAgent():
                 self.learn(experiences)
                 
     def act(self, states, add_noise=True):
+        actions = []
         state = torch.from_numpy(states).to(self.device)
 
         self.actor_local.eval()
@@ -85,13 +89,17 @@ class DDPGAgent():
             action = self.actor_local(state).cpu().data.numpy()
         self.actor_local.train()
         
-        if add_noise:
-            action += self.epsilon * self.noise.sample()
+        for i in range(0, self.num_agents):
+            if add_noise:
+                actions.append(np.clip(action[i] + self.noise[i].sample(), -1, 1))
+            else:
+                actions.append(np.clip(action[i], -1, 1))
 
-        return action
+        return actions
 
     def reset(self):
-        self.noise.reset()
+        for i in range(self.num_agents):
+            self.noise[i].reset()
         
     def learn(self, experiences):
         states, actions, rewards, next_states, dones = experiences
@@ -127,10 +135,6 @@ class DDPGAgent():
         # ----------------------- update target networks ----------------------- #
         self.soft_update(self.critic_local, self.critic_target, self.tau)
         self.soft_update(self.actor_local, self.actor_target, self.tau)
-
-        # ---------------------------- update noise ---------------------------- #
-        self.epsilon -= self.epsilon_decay
-        self.noise.reset()
 
     
     # θ'=θ×τ+θ'×(1−τ)
