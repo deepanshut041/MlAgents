@@ -18,13 +18,28 @@ This repository contains the implementation of deep reinforcement learning algor
 
 ## Environments
 
-|   |   |
-|-|-|
-| <img src="./media/basic.png" width="700px"> | <h3>Basic</h3><p>A linear movement task where the agent must move left or right to rewarding states. The goal is to move to the most reward state.</p><p>**:file_folder: [Implementation](./basic)**</p><p> **:video_camera: [Video Tutorial](.)**</p> |
+<table>
+  <tbody>
+    <tr>
+        <td>
+          <img src="./media/basic.png" width="700px">
+        </td>
+        <td>
+          <h3>Basic</h3>
+          <p>A linear movement task where the agent must move left or right to rewarding states. The goal is to move to the most reward state.</p>
+          <p>:file_folder: <a href="./basic">Implementation</a></p>
+          <p>:video_camera: <a href="./basic">Video Tutorial</a></p>
+        </td>
+    </tr>
+    </tbody>
+</table>
+
+
+<!-- |  |  |
 | <img src="./media/push.png" width="700px"> | <h3>Push Block</h3><p>A platforming The Environment where the agent can push a block around. Here the goal is agent must push the block to the goal.</p><p>**:file_folder: [Implementation](./push-block)**</p><p> **:video_camera: [Video Tutorial](.)**</p> |
 | <img src="./media/reacher.png" width="700px"> | <h3>Reacher</h3><p>The Double-jointed arm which can move to target locations. Here the goal is agents must move its hand to the goal location, and keep it there.</p><p>**:file_folder: [Implementation](./reacher)**</p><p> **:video_camera: [Video Tutorial](.)**</p> |
 | <img src="./media/balance.png" width="700px"> | <h3>3D Balance Ball</h3><p>A balance-ball task, where the agent balances the ball on its head. Here the goal is agent must balance the ball on its head for as long as possible.</p><p>**:file_folder: [Implementation](./3d-balance-ball)**</p><p> **:video_camera: [Video Tutorial](.)**</p> |
-| <img src="./media/gridworld.png" width="700px"> | <h3>Grid World</h3><p>A version of the classic grid-world task. Scene contain agent, goal, and obstacles. Here the goal is an agent must navigate the grid to the goal while avoiding the obstacles.</p><p>**:file_folder: [Implementation](./gridworld)**</p><p> **:video_camera: [Video Tutorial](.)**</p> |
+| <img src="./media/gridworld.png" width="700px"> | <h3>Grid World</h3><p>A version of the classic grid-world task. Scene contain agent, goal, and obstacles. Here the goal is an agent must navigate the grid to the goal while avoiding the obstacles.</p><p>**:file_folder: [Implementation](./gridworld)**</p><p> **:video_camera: [Video Tutorial](.)**</p> | -->
 
 ## Installation
 
