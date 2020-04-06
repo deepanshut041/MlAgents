@@ -1,5 +1,6 @@
-<img src="./media/unity_logo.png" height="40px">
-<img src="./media/pytorch_logo.jpeg" height="40px">
+<img src="./media/icon.png" height="80px">
+<img src="./media/unity_logo.png" height="80px">
+<img src="./media/pytorch_logo.jpeg" height="80px">
 
 # :construction: This Repository is under construction. I'm currently updating the implementations with PyTorch
 
@@ -19,27 +20,33 @@ This repository contains the implementation of deep reinforcement learning algor
 ## Environments
 
 <table>
-  <tbody>
-    <tr>
-        <td>
-          <img src="./media/basic.png" width="700px">
-        </td>
-        <td>
-          <h3>Basic</h3>
-          <p>A linear movement task where the agent must move left or right to rewarding states. The goal is to move to the most reward state.</p>
-          <p>:file_folder: <a href="./basic">Implementation</a></p>
-          <p>:video_camera: <a href="./basic">Video Tutorial</a></p>
-        </td>
-    </tr>
-    </tbody>
+  <tr>
+      <td>
+        <img src="./media/basic.png" width="800px">
+      </td>
+      <td>
+        <h3>Basic</h3>
+        <p>A linear movement task where the agent must move left or right to rewarding states. The goal is to move to the most reward state.</p>
+        <p>:file_folder: <a href="./basic">Implementation</a></p>
+        <p>:video_camera: <a href="./basic">Video Tutorial</a></p>
+      </td>
+  </tr>
 </table>
 
+<table>
+  <tr>
+      <td>
+        <img src="./media/push.png" width="800px">
+      </td>
+      <td>
+        <h3>Push Block</h3>
+        <p>A platforming The Environment where the agent can push a block around. Here the goal is agent must push the block to the goal.</p>
+        <p>:file_folder: <a href="./push-block">Implementation</a></p>
+        <p>:video_camera: <a href="./basic">Video Tutorial</a></p>
+      </td>
+  </tr>
+</table>
 
-<!-- |  |  |
-| <img src="./media/push.png" width="700px"> | <h3>Push Block</h3><p>A platforming The Environment where the agent can push a block around. Here the goal is agent must push the block to the goal.</p><p>**:file_folder: [Implementation](./push-block)**</p><p> **:video_camera: [Video Tutorial](.)**</p> |
-| <img src="./media/reacher.png" width="700px"> | <h3>Reacher</h3><p>The Double-jointed arm which can move to target locations. Here the goal is agents must move its hand to the goal location, and keep it there.</p><p>**:file_folder: [Implementation](./reacher)**</p><p> **:video_camera: [Video Tutorial](.)**</p> |
-| <img src="./media/balance.png" width="700px"> | <h3>3D Balance Ball</h3><p>A balance-ball task, where the agent balances the ball on its head. Here the goal is agent must balance the ball on its head for as long as possible.</p><p>**:file_folder: [Implementation](./3d-balance-ball)**</p><p> **:video_camera: [Video Tutorial](.)**</p> |
-| <img src="./media/gridworld.png" width="700px"> | <h3>Grid World</h3><p>A version of the classic grid-world task. Scene contain agent, goal, and obstacles. Here the goal is an agent must navigate the grid to the goal while avoiding the obstacles.</p><p>**:file_folder: [Implementation](./gridworld)**</p><p> **:video_camera: [Video Tutorial](.)**</p> | -->
 
 ## Installation
 
