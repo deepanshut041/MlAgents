@@ -1,3 +1,5 @@
 theme: jekyll-theme-cayman
+title: [Unity Ml Agents with PyTorch]
+description: [This site contains the implementation of deep reinforcement learning algorithms to solve various unity The Environments.]
 plugins:
   - jemoji
