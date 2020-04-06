@@ -1,10 +1,4 @@
-<img src="./media/icon.png" height="80px">
-<img src="./media/unity_logo.png" height="80px">
-<img src="./media/pytorch_logo.jpeg" height="80px">
-
-# :construction: This Repository is under construction. I'm currently updating the implementations with PyTorch
-
-# Unity ML-Agents with Pytorch
+# Unity Ml Agents with Pytorch
 
 This repository contains the implementation of deep reinforcement learning algorithms to solve various unity The Environments. The deep reinforcement agents are implemented with the help of PyTorch.
 
@@ -31,22 +25,18 @@ This repository contains the implementation of deep reinforcement learning algor
         <p>:video_camera: <a href="./basic">Video Tutorial</a></p>
       </td>
   </tr>
-</table>
-
-<table>
   <tr>
-      <td>
-        <img src="./media/push.png" width="800px">
-      </td>
-      <td>
-        <h3>Push Block</h3>
-        <p>A platforming The Environment where the agent can push a block around. Here the goal is agent must push the block to the goal.</p>
-        <p>:file_folder: <a href="./push-block">Implementation</a></p>
-        <p>:video_camera: <a href="./basic">Video Tutorial</a></p>
-      </td>
+    <td>
+      <img src="./media/push.png" width="800px">
+    </td>
+    <td>
+      <h3>Push Block</h3>
+      <p>A platforming The Environment where the agent can push a block around. Here the goal is agent must push the block to the goal.</p>
+      <p>:file_folder: <a href="./push-block">Implementation</a></p>
+      <p>:video_camera: <a href="./basic">Video Tutorial</a></p>
+    </td>
   </tr>
 </table>
-
 
 ## Installation
 
