@@ -1,5 +1,5 @@
 theme: jekyll-theme-cayman
-title: Unity Ml Agents with PyTorch
-description: This site contains the implementation of deep reinforcement learning algorithms to solve various unity The Environments.
+title: Solving Unity Ml Agents with PyTorch
+description: In this series of tutroial we're going to solve Unity Enviroment with different algorithms using PyTorch.
 plugins:
   - jemoji

@@ -1,42 +1,15 @@
-# Unity Ml Agents with Pytorch
+# Solving Unity Ml Agents with PyTorch
 
-This repository contains the implementation of deep reinforcement learning algorithms to solve various unity The Environments. The deep reinforcement agents are implemented with the help of PyTorch.
+In this series of tutorial we're going to solve Unity Environment with Deep Reinforcement learning algorithms using PyTorch.
 
 <p align="center"><img src="./media/header.png" width="100%"></p>
 
 ## Index
 
-- [**Environments**](#Environments)
 - [**Installation**](#installation)
+- [**Environments**](#Environments)
 - [**Any questions**](#any-questions)
 - [**How to help**](#how-to-help)
-
-## Environments
-
-<table>
-  <tr>
-      <td>
-        <img src="./media/basic.png" width="800px">
-      </td>
-      <td>
-        <h3>Basic</h3>
-        <p>A linear movement task where the agent must move left or right to rewarding states. The goal is to move to the most reward state.</p>
-        <p>:file_folder: <a href="./basic">Implementation</a></p>
-        <p>:video_camera: <a href="./basic">Video Tutorial</a></p>
-      </td>
-  </tr>
-  <tr>
-    <td>
-      <img src="./media/push.png" width="800px">
-    </td>
-    <td>
-      <h3>Push Block</h3>
-      <p>A platforming The Environment where the agent can push a block around. Here the goal is agent must push the block to the goal.</p>
-      <p>:file_folder: <a href="./push-block">Implementation</a></p>
-      <p>:video_camera: <a href="./basic">Video Tutorial</a></p>
-    </td>
-  </tr>
-</table>
 
 ## Installation
 
@@ -64,6 +37,32 @@ Finally, download Environments that correspond to your operating system. Copy/pa
 
 - [Windows (64-bit)](https://drive.google.com/open?id=1yMMMJC4ttS118eqYbr2PpDSpdnyhSoDx)
 
+## Environments
+
+<table>
+  <tr>
+      <td>
+        <img src="./media/basic.png" width="800px">
+      </td>
+      <td>
+      <div>
+          <h3>Basic</h3>
+          <p>A linear movement task where the agent must move left or right to rewarding states. The goal is to move to the most reward state.</p>
+          <table style="border-collapse: collapse; border: none;">
+            <tr style="border: none;background: #fff;">
+              <td style="border: none;">:newspaper: <a href="https://medium.com/data-breach/" target="_blank">Article</a></td>
+              <td style="border: none;">:video_camera: <a href="https://www.youtube.com/channel/UCXvsEeJqUGsiKRownM1QJqA">Video Tutorial</a></td>
+            </tr>
+            <tr style="border: none;background: #fff;">
+              <td style="border: none;">:file_folder: <a href="./01_basic">Implementation</a></td>
+              <td style="border: none;">:page_with_curl: <a href="https://www.cs.toronto.edu/~vmnih/docs/dqn.pdf">DQN</a></td>
+            </tr>
+          </table>
+        </div>
+      </td>
+  </tr>
+</table>
+
 ## Any questions
 
 If you have any questions, feel free to ask me:
@@ -73,7 +72,7 @@ If you have any questions, feel free to ask me:
 - **Website**: [https://data-breach.github.io/MlAgents](https://data-breach.github.io/MlAgents)
 - **Twitter**: <a href="https://twitter.com/deepanshut041">@deepanshut041</a>
 
-Don't forget to follow me on <a href="https://twitter.com/data-breach">twitter</a>, <a href="https://github.com/data-breach">github</a> and <a href="https://medium.com/@data-breach">Medium</a> to be alerted of the new articles that I publish
+Don't forget to follow me on <a href="https://twitter.com/data-breach">twitter</a>, <a href="https://github.com/data-breach">github</a> and <a href="https://medium.com/data-breach">Medium</a> to be alerted of the new articles that I publish
 
 ## How to help  
 
