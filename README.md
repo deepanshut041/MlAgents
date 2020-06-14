@@ -1,8 +1,10 @@
 # Solving Unity Ml Agents with PyTorch
 
-In this series of tutorial we're going to solve Unity Environment with Deep Reinforcement learning algorithms using PyTorch.
+In this series of tutorials, we'll be solving Unity Environments with Deep Reinforcement Learning using PyTorch.  The Unity Machine Learning Agents Toolkit (ML-Agents) is an open-source Unity plugin that enables games and simulations to serve as environments for training intelligent agents. 
 
 <p align="center"><img src="./media/header.png" width="100%"></p>
+
+Agents can be trained using reinforcement learning, imitation learning, neuroevolution, or other machine learning methods through a simple-to-use Python API. Currently, unity only supports Tensorflow to train model and there is no support for PyTorch.  To train these environments using PyTorch we'll be using the standalone version of these environments.
 
 ## Index
 
@@ -13,27 +15,29 @@ In this series of tutorial we're going to solve Unity Environment with Deep Rein
 
 ## Installation
 
-Create a new Python 3.7 The Environment.
+To get started with tutorial download the repository or clone it. Than create new conda environment install required dependencies from `requirements.txt`.
 
-```bash
-conda create --name unityai python=3.7
-activate unityai
-```
+- Clone this repository locally.
 
-Clone this repository locally.
+  ```bash
+  git clone https://github.com/deepanshut041/ml_agents-pytorch.git
+  cd ml_agents-pytorch
+  ```
 
-```bash
-git clone https://github.com/deepanshut041/ml_agents-pytorch.git
-cd ml_agents-pytorch
-```
+- Create a new Python 3.7 The Environment.
 
-Install ml-agents and other dependencies.
+  ```bash
+  conda create --name unityai python=3.7
+  activate unityai
+  ```
 
-```bash
-pip install -r requirements.txt
-```
+- Install ml-agents and other dependencies.
 
-Finally, download Environments that correspond to your operating system. Copy/paste the extracted content to the folder with the name of `unity_envs`.
+  ```bash
+  pip install -r requirements.txt
+  ```
+
+Now our environment is ready download Standalone environments and place them in `unity_envs` folder. You can download them from below according to your operating system.
 
 - [Windows (64-bit)](https://drive.google.com/open?id=1yMMMJC4ttS118eqYbr2PpDSpdnyhSoDx)
 
